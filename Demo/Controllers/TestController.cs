@@ -18,8 +18,7 @@ namespace Demo.Controllers
             emp.LastName = "Frank";
             emp.Salary = 20000f;
 
-            ViewData["Employee"] = emp;
-            return View("MyView");
+            return View("MyView", emp);
         }
 	}
 }
