@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Demo.Models;
+using Demo.ViewModels;
 
 namespace Demo.Controllers
 {
@@ -18,7 +19,13 @@ namespace Demo.Controllers
             emp.LastName = "Frank";
             emp.Salary = 20000f;
 
-            return View("MyView", emp);
+            EmployeeViewModel vm = new EmployeeViewModel();
+            vm.EmployeeName = emp.FirstName + " " + emp.LastName;
+            vm.Salary = emp.Salary.ToString("C");
+            vm.SalaryColor = emp.Salary > 15000 ? "yellow" : "green";
+            vm.UserName = "Admin";
+
+            return View("MyView", vm);
         }
 	}
 }
