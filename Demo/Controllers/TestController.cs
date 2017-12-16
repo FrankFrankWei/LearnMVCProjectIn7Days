@@ -14,18 +14,24 @@ namespace Demo.Controllers
         // GET: /Test/
         public ActionResult Index()
         {
-            Employee emp = new Employee();
-            emp.FirstName = "Wei";
-            emp.LastName = "Frank";
-            emp.Salary = 20000f;
+            List<Employee> employees = (new EmployeeBusinessLayer()).GetEmployees();
 
-            EmployeeViewModel vm = new EmployeeViewModel();
-            vm.EmployeeName = emp.FirstName + " " + emp.LastName;
-            vm.Salary = emp.Salary.ToString("C");
-            vm.SalaryColor = emp.Salary > 15000 ? "yellow" : "green";
-            vm.UserName = "Admin";
+            EmployeeListViewModel employeeListViewModel = new EmployeeListViewModel();
+            employeeListViewModel.UserName = "Admin";
+            employeeListViewModel.Employees = new List<EmployeeViewModel>();
 
-            return View("MyView", vm);
+            foreach (Employee e in employees)
+            {
+                EmployeeViewModel vm = new EmployeeViewModel();
+                vm.EmployeeName = e.FirstName + " " + e.LastName;
+                vm.Salary = e.Salary.ToString("C");
+                vm.SalaryColor = e.Salary > 15000 ? "yellow" : "green";
+
+                employeeListViewModel.Employees.Add(vm);
+            }
+
+
+            return View("MyView", employeeListViewModel);
         }
-	}
+    }
 }

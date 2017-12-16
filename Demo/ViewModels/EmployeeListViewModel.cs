@@ -1,6 +1,6 @@
 ﻿/******************************************************************
 ** auth: Frank
-** date: 12/16/2017 11:12:09 PM
+** date: 12/16/2017 11:24:55 PM
 ** desc:
 ******************************************************************/
 
@@ -11,10 +11,9 @@ using System.Web;
 
 namespace Demo.ViewModels
 {
-    public class EmployeeViewModel
+    public class EmployeeListViewModel
     {
-        public string EmployeeName { set; get; }
-        public string Salary { set; get; }
-        public string SalaryColor { set; get; }
+        public string UserName { set; get; }
+        public List<EmployeeViewModel> Employees { set; get; }
     }
 }
