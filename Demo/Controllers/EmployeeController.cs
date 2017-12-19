@@ -43,7 +43,8 @@ namespace Demo.Controllers
             switch (btnSubmit)
             {
                 case "Save":
-                    return Content(e.FirstName + "|" + e.LastName + "|" + e.Salary);
+                    (new EmployeeBusinessLayer()).SaveEmployee(e);
+                    return RedirectToAction("Index");
                 case "Cancel":
                     return RedirectToAction("Index");
             }
