@@ -21,6 +21,15 @@ namespace Demo.Models
             return dal.Employees.ToList();
         }
 
+        public Employee SaveEmployee(Employee e)
+        {
+            SalesERPDAL dal = new SalesERPDAL();
+            dal.Employees.Add(e);
+            dal.SaveChanges();
+            return e;
+        }
+
+        #region private methods
         private List<Employee> MockData()
         {
             List<Employee> employees = new List<Employee>();
@@ -36,5 +45,7 @@ namespace Demo.Models
 
             return employees;
         }
+
+        #endregion
     }
 }

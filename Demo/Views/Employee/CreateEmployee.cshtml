@@ -1,0 +1,33 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <script>
+        function resetForm() {
+            document.getElementById('txtFName').value = "";
+            document.getElementById('txtLName').value = "";
+            document.getElementById('txtSalary').value = "";
+        }
+    </script>
+    <meta name="viewport" content="width=device-width" />
+    <title>CreateEmployee</title>
+</head>
+<body>
+    <div> 
+        <form action="/Employee/SaveEmployee" method="post">
+            FirstName: <input type="text" id="txtFName" name="FirstName" value=""/><br /><br />
+            LastName : <input type="text" id="txtLName" name="LastName" value=""/><br /><br />
+            Salary   : <input type="text" id="txtSalary" name="Salary" value=""/><br /><br />
+
+            <input type="submit" name="btnSubmit" value="Save" />
+            <input type="button" name="btnReset" value="Reset" onclick="resetForm()"/>
+            <input type="submit" name="btnSubmit" value="Cancel" />
+        </form>
+    </div>
+</body>
+</html>

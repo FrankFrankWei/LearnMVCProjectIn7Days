@@ -32,5 +32,24 @@ namespace Demo.Controllers
 
             return View(employeeListViewModel);
         }
+
+        public ActionResult AddNew()
+        {
+            return View("CreateEmployee"); 
+        }
+
+        public ActionResult SaveEmployee(Employee e, string btnSubmit)
+        {
+            switch (btnSubmit)
+            {
+                case "Save":
+                    return Content(e.FirstName + "|" + e.LastName + "|" + e.Salary);
+                case "Cancel":
+                    return RedirectToAction("Index");
+            }
+
+            return new EmptyResult();
+        }
+
     }
 }
