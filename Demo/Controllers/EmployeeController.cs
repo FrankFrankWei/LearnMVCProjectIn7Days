@@ -35,7 +35,7 @@ namespace Demo.Controllers
 
         public ActionResult AddNew()
         {
-            return View("CreateEmployee"); 
+            return View("CreateEmployee");
         }
 
         public ActionResult SaveEmployee(Employee e, string btnSubmit)
@@ -43,8 +43,15 @@ namespace Demo.Controllers
             switch (btnSubmit)
             {
                 case "Save":
-                    (new EmployeeBusinessLayer()).SaveEmployee(e);
-                    return RedirectToAction("Index");
+                    if (ModelState.IsValid)
+                    {
+                        (new EmployeeBusinessLayer()).SaveEmployee(e);
+                        return RedirectToAction("Index");
+                    }
+                    else
+                    {
+                        return View("CreateEmployee");
+                    }
                 case "Cancel":
                     return RedirectToAction("Index");
             }
