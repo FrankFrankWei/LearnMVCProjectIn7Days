@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations;
+using Demo.Validations;
 
 namespace Demo.Models
 {
@@ -17,7 +18,7 @@ namespace Demo.Models
         [Key]
         public int EmployeeId { set; get; }
 
-        [Required(ErrorMessage="Enter First Name")]
+        [EmployeeFirstNameValidation(ErrorMessage="Invalid first name")]
         public string FirstName { set; get; }
 
         [StringLength(5, ErrorMessage="Last Name length should not be greater than 5")]
@@ -25,4 +26,5 @@ namespace Demo.Models
 
         public float Salary { set; get; }
     }
+
 }
