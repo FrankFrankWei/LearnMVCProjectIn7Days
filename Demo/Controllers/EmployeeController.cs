@@ -23,7 +23,7 @@ namespace Demo.Controllers
             {
                 EmployeeViewModel vm = new EmployeeViewModel();
                 vm.EmployeeName = e.FirstName + " " + e.LastName;
-                vm.Salary = e.Salary.ToString("C");
+                vm.Salary = e.Salary.Value.ToString("C");
                 vm.SalaryColor = e.Salary > 15000 ? "yellow" : "green";
 
                 employeeListViewModel.Employees.Add(vm);
@@ -35,7 +35,7 @@ namespace Demo.Controllers
 
         public ActionResult AddNew()
         {
-            return View("CreateEmployee");
+            return View("CreateEmployee", new CreateEmployeeViewModel());
         }
 
         public ActionResult SaveEmployee(Employee e, string btnSubmit)
@@ -50,7 +50,20 @@ namespace Demo.Controllers
                     }
                     else
                     {
-                        return View("CreateEmployee");
+                        CreateEmployeeViewModel vm = new CreateEmployeeViewModel();
+                        vm.FirstName = e.FirstName;
+                        vm.LastName = e.LastName;
+
+                        if (e.Salary.HasValue)
+                        {
+                            vm.Salary = e.Salary.ToString();
+                        }
+                        else
+                        {
+                            vm.Salary = ModelState["Salary"].Value.AttemptedValue;
+                        }
+
+                        return View("CreateEmployee", vm);
                     }
                 case "Cancel":
                     return RedirectToAction("Index");

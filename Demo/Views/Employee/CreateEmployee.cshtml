@@ -1,4 +1,5 @@
-﻿@{
+﻿@model Demo.ViewModels.CreateEmployeeViewModel
+@{
     Layout = null;
 }
 
@@ -23,7 +24,7 @@
                 <tr>
                     <td>First Name:</td>
                     <td>
-                        <input type="text" id="txtFName" name="FirstName" value="" />
+                        <input type="text" id="txtFName" name="FirstName" value="@Model.FirstName" />
                     </td>
                 </tr>
 
@@ -36,7 +37,7 @@
                 <tr>
                     <td>Last Name:</td>
                     <td>
-                        <input type="text" id="txtLName" name="LastName" value="" />
+                        <input type="text" id="txtLName" name="LastName" value="@Model.LastName" />
                     </td>
                 </tr>
 
@@ -49,7 +50,7 @@
                 <tr>
                     <td>Salary:</td>
                     <td>
-                        <input type="text" id="txtSalary" name="Salary" value="" />
+                        <input type="text" id="txtSalary" name="Salary" value="@Model.Salary" />
                     </td>
                 </tr>
 

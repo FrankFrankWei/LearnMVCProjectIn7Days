@@ -24,7 +24,7 @@ namespace Demo.Models
         [StringLength(5, ErrorMessage="Last Name length should not be greater than 5")]
         public string LastName { set; get; }
 
-        public float Salary { set; get; }
+        public int? Salary { set; get; }
     }
 
 }
