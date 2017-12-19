@@ -8,12 +8,20 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using Demo.DataAccessLayer;
 
 namespace Demo.Models
 {
     public class EmployeeBusinessLayer
     {
         public List<Employee> GetEmployees()
+        {
+            //return MockData();
+            SalesERPDAL dal = new SalesERPDAL();
+            return dal.Employees.ToList();
+        }
+
+        private List<Employee> MockData()
         {
             List<Employee> employees = new List<Employee>();
             for(int i = 0; i < 10; i++)
