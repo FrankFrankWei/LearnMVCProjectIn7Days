@@ -8,16 +8,15 @@ using Demo.ViewModels;
 
 namespace Demo.Controllers
 {
-    public class TestController : Controller
+    public class EmployeeController : Controller
     {
         //
-        // GET: /Test/
+        // GET: /Employee/
         public ActionResult Index()
         {
             List<Employee> employees = (new EmployeeBusinessLayer()).GetEmployees();
 
             EmployeeListViewModel employeeListViewModel = new EmployeeListViewModel();
-            employeeListViewModel.UserName = "Admin";
             employeeListViewModel.Employees = new List<EmployeeViewModel>();
 
             foreach (Employee e in employees)
@@ -31,7 +30,7 @@ namespace Demo.Controllers
             }
 
 
-            return View("MyView", employeeListViewModel);
+            return View(employeeListViewModel);
         }
     }
 }
