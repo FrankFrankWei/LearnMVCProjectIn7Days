@@ -1,6 +1,7 @@
 ﻿@model Demo.ViewModels.EmployeeListViewModel
 @{
     Layout = null;
+    string myString = "<b>show diff between Html.RenderPartial and Html.Partial</b>";
 }
 
 <!DOCTYPE html>
@@ -11,7 +12,10 @@
     <title>MyView</title>
 </head>
 <body>
-    <div style="text-align:left">Hello, @Model.UserName
+    @myString
+    @MvcHtmlString.Create(myString)
+    <div style="text-align:left">
+        Hello, @Model.UserName
         <a href="~/Authentication/Logout">Logout</a>
     </div>
     <hr />
@@ -33,6 +37,9 @@
                 </tr>
             }
         </table>
+        @{
+            Html.RenderPartial("Footer", Model.FooterData);
+        }
     </div>
 </body>
 </html>

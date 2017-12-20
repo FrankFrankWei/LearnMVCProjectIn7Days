@@ -31,6 +31,9 @@ namespace Demo.Controllers
                 employeeListViewModel.Employees.Add(vm);
             }
 
+            employeeListViewModel.FooterData = new FooterViewModel();
+            employeeListViewModel.FooterData.CompanyName = "StepByStepSchools";
+            employeeListViewModel.FooterData.Year = DateTime.Now.ToString();
 
             return View(employeeListViewModel);
         }

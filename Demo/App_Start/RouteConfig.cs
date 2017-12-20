@@ -16,7 +16,7 @@ namespace Demo
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Authentication", action = "Login", id = UrlParameter.Optional }
+                defaults: new { controller = "Employee", action = "Index", id = UrlParameter.Optional }
             );
         }
     }
