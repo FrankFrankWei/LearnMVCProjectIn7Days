@@ -29,6 +29,18 @@ namespace Demo.Models
             return e;
         }
 
+        public bool IsValidUser(UserDetails user)
+        {
+            if (user.UserName == "admin" && user.Password == "admin")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         #region private methods
         private List<Employee> MockData()
         {

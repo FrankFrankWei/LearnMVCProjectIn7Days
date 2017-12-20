@@ -12,6 +12,7 @@ namespace Demo.Controllers
     {
         //
         // GET: /Employee/
+        [Authorize]
         public ActionResult Index()
         {
             List<Employee> employees = (new EmployeeBusinessLayer()).GetEmployees();
