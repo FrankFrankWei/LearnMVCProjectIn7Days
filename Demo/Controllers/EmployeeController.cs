@@ -18,6 +18,7 @@ namespace Demo.Controllers
             List<Employee> employees = (new EmployeeBusinessLayer()).GetEmployees();
 
             EmployeeListViewModel employeeListViewModel = new EmployeeListViewModel();
+            employeeListViewModel.UserName = User.Identity.Name;
             employeeListViewModel.Employees = new List<EmployeeViewModel>();
 
             foreach (Employee e in employees)

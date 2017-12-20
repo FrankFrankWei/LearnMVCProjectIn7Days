@@ -18,20 +18,33 @@ namespace Demo.Controllers
             return View();
         }
 
+        public ActionResult Logout()
+        {
+            FormsAuthentication.SignOut();
+            return View("Login");
+        }
+
         [HttpPost]
         public ActionResult DoLogin(UserDetails user)
         {
-            EmployeeBusinessLayer bl = new EmployeeBusinessLayer();
-            if(bl.IsValidUser(user))
+            if (ModelState.IsValid)
             {
-                FormsAuthentication.SetAuthCookie(user.UserName, false);
-                return RedirectToAction("Index", "Employee");
+                EmployeeBusinessLayer bl = new EmployeeBusinessLayer();
+                if (bl.IsValidUser(user))
+                {
+                    FormsAuthentication.SetAuthCookie(user.UserName, false);
+                    return RedirectToAction("Index", "Employee");
+                }
+                else
+                {
+                    ModelState.AddModelError("CredentialError", "Invalid user name or password");
+                    return View("Login");
+                }
             }
             else
             {
-                ModelState.AddModelError("CredentialError", "Invalid user name or password");
                 return View("Login");
             }
         }
-	}
+    }
 }

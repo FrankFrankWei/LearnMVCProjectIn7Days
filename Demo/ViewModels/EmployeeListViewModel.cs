@@ -13,6 +13,7 @@ namespace Demo.ViewModels
 {
     public class EmployeeListViewModel
     {
+        public string UserName { set; get; }
         public List<EmployeeViewModel> Employees { set; get; }
     }
 }
