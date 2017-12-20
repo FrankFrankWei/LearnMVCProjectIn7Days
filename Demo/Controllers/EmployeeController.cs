@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using Demo.Models;
 using Demo.ViewModels;
+using Demo.Filters;
 
 namespace Demo.Controllers
 {
@@ -38,11 +39,13 @@ namespace Demo.Controllers
             return View(employeeListViewModel);
         }
 
+        [AdminFilter]
         public ActionResult AddNew()
         {
             return View("CreateEmployee", new CreateEmployeeViewModel());
         }
 
+        [AdminFilter]
         public ActionResult SaveEmployee(Employee e, string btnSubmit)
         {
             switch (btnSubmit)
