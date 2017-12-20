@@ -29,15 +29,19 @@ namespace Demo.Models
             return e;
         }
 
-        public bool IsValidUser(UserDetails user)
+        public UserStatus GetUserStatus(UserDetails user)
         {
             if (user.UserName == "admin" && user.Password == "admin")
             {
-                return true;
+                return UserStatus.AuthenticatedAdmin;
+            }
+            else if(user.UserName == "frank" && user.Password == "frank")
+            {
+                return UserStatus.AuthenticatedUser;
             }
             else
             {
-                return false;
+                return UserStatus.NonAuthenticatedUser;
             }
         }
 

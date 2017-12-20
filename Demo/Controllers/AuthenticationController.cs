@@ -30,16 +30,26 @@ namespace Demo.Controllers
             if (ModelState.IsValid)
             {
                 EmployeeBusinessLayer bl = new EmployeeBusinessLayer();
-                if (bl.IsValidUser(user))
+                UserStatus userStatus = bl.GetUserStatus(user);
+                bool isAdmin = false;
+
+                if (userStatus == UserStatus.AuthenticatedAdmin)
                 {
-                    FormsAuthentication.SetAuthCookie(user.UserName, false);
-                    return RedirectToAction("Index", "Employee");
+                    isAdmin = true;
+                }
+                else if (userStatus == UserStatus.AuthenticatedUser)
+                {
+                    isAdmin = false;
                 }
                 else
                 {
                     ModelState.AddModelError("CredentialError", "Invalid user name or password");
                     return View("Login");
                 }
+
+                FormsAuthentication.SetAuthCookie(user.UserName, false);
+                Session["IsAdmin"] = isAdmin;
+                return RedirectToAction("Index", "Employee");
             }
             else
             {
