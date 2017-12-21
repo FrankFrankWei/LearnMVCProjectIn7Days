@@ -42,7 +42,13 @@ namespace Demo.Controllers
         [AdminFilter]
         public ActionResult AddNew()
         {
-            return View("CreateEmployee", new CreateEmployeeViewModel());
+            CreateEmployeeViewModel vm = new CreateEmployeeViewModel();
+            vm.UserName = User.Identity.Name;
+            vm.FooterData = new FooterViewModel();
+            vm.FooterData.CompanyName = "StepByStepSchools";
+            vm.FooterData.Year = DateTime.Now.Year.ToString();
+
+            return View("CreateEmployee", vm);
         }
 
         [AdminFilter]
@@ -61,6 +67,11 @@ namespace Demo.Controllers
                         CreateEmployeeViewModel vm = new CreateEmployeeViewModel();
                         vm.FirstName = e.FirstName;
                         vm.LastName = e.LastName;
+
+                        vm.UserName = User.Identity.Name;
+                        vm.FooterData = new FooterViewModel();
+                        vm.FooterData.CompanyName = "StepByStepSchools";
+                        vm.FooterData.Year = DateTime.Now.Year.ToString();
 
                         if (e.Salary.HasValue)
                         {

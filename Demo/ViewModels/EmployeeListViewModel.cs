@@ -11,10 +11,8 @@ using System.Web;
 
 namespace Demo.ViewModels
 {
-    public class EmployeeListViewModel
+    public class EmployeeListViewModel : BaseViewModel
     {
-        public string UserName { set; get; }
         public List<EmployeeViewModel> Employees { set; get; }
-        public FooterViewModel FooterData { set; get; }
     }
 }

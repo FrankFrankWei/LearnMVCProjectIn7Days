@@ -1,12 +1,13 @@
 ﻿@model Demo.ViewModels.CreateEmployeeViewModel
 @{
-    Layout = null;
+    Layout = "~/Views/Shared/_MyLayout.cshtml";
 }
 
-<!DOCTYPE html>
+@section TitleSection{
+    Create Employee
+}
 
-<html>
-<head>
+@section HeaderSection{
     <script src="~/Scripts/customValidation.js"></script>
     <script>
         function resetForm() {
@@ -15,10 +16,9 @@
             document.getElementById('txtSalary').value = "";
         }
     </script>
-    <meta name="viewport" content="width=device-width" />
-    <title>CreateEmployee</title>
-</head>
-<body>
+}
+
+@section ContentBody{
     <div>
         <form action="/Employee/SaveEmployee" method="post">
             <table>
@@ -71,5 +71,4 @@
             </table>
         </form>
     </div>
-</body>
-</html>
+}

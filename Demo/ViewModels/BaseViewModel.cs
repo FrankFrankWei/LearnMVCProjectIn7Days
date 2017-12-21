@@ -1,6 +1,6 @@
 ﻿/******************************************************************
 ** auth: Frank
-** date: 12/19/2017 9:45:52 PM
+** date: 12/21/2017 8:52:22 PM
 ** desc:
 ******************************************************************/
 
@@ -11,10 +11,9 @@ using System.Web;
 
 namespace Demo.ViewModels
 {
-    public class CreateEmployeeViewModel : BaseViewModel
+    public class BaseViewModel
     {
-        public string FirstName { set; get; }
-        public string LastName { set; get; }
-        public string Salary { set; get; }
+        public string UserName { set; get; }
+        public FooterViewModel FooterData { set; get; }
     }
 }
