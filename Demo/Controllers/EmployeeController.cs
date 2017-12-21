@@ -14,12 +14,12 @@ namespace Demo.Controllers
         //
         // GET: /Employee/
         [Authorize]
+        [HeaderFooterFilter]
         public ActionResult Index()
         {
             List<Employee> employees = (new EmployeeBusinessLayer()).GetEmployees();
 
             EmployeeListViewModel employeeListViewModel = new EmployeeListViewModel();
-            employeeListViewModel.UserName = User.Identity.Name;
             employeeListViewModel.Employees = new List<EmployeeViewModel>();
 
             foreach (Employee e in employees)
@@ -32,26 +32,20 @@ namespace Demo.Controllers
                 employeeListViewModel.Employees.Add(vm);
             }
 
-            employeeListViewModel.FooterData = new FooterViewModel();
-            employeeListViewModel.FooterData.CompanyName = "StepByStepSchools";
-            employeeListViewModel.FooterData.Year = DateTime.Now.ToString();
-
             return View(employeeListViewModel);
         }
 
         [AdminFilter]
+        [HeaderFooterFilter]
         public ActionResult AddNew()
         {
             CreateEmployeeViewModel vm = new CreateEmployeeViewModel();
-            vm.UserName = User.Identity.Name;
-            vm.FooterData = new FooterViewModel();
-            vm.FooterData.CompanyName = "StepByStepSchools";
-            vm.FooterData.Year = DateTime.Now.Year.ToString();
 
             return View("CreateEmployee", vm);
         }
 
         [AdminFilter]
+        [HeaderFooterFilter]
         public ActionResult SaveEmployee(Employee e, string btnSubmit)
         {
             switch (btnSubmit)
@@ -67,11 +61,6 @@ namespace Demo.Controllers
                         CreateEmployeeViewModel vm = new CreateEmployeeViewModel();
                         vm.FirstName = e.FirstName;
                         vm.LastName = e.LastName;
-
-                        vm.UserName = User.Identity.Name;
-                        vm.FooterData = new FooterViewModel();
-                        vm.FooterData.CompanyName = "StepByStepSchools";
-                        vm.FooterData.Year = DateTime.Now.Year.ToString();
 
                         if (e.Salary.HasValue)
                         {
