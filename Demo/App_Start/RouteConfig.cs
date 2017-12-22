@@ -12,6 +12,13 @@ namespace Demo
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+            routes.MapMvcAttributeRoutes();// then we can custom url of action methods, like [Route("Employee/List/{id:int}")] on an action
+
+            routes.MapRoute(
+                name: "Upload",
+                url: "Employee/BulkUpload",
+                defaults: new { controller = "BulkUpload", action = "Index" }
+            );
 
             routes.MapRoute(
                 name: "Default",
