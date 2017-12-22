@@ -7,6 +7,7 @@ using System.Web.Mvc;
 using Demo.ViewModels;
 using Demo.Models;
 using System.IO;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Demo.Controllers
@@ -24,7 +25,7 @@ namespace Demo.Controllers
         [AdminFilter]
         public async Task<ActionResult> Upload(FileUploadViewModel file)
         {
-            List<Employee> employees = GetEmployeesFromUploadFile(file);
+            List<Employee> employees = await Task.Factory.StartNew<List<Employee>>(() => GetEmployeesFromUploadFile(file));
             (new EmployeeBusinessLayer()).UploadEmployees(employees);
 
             return RedirectToAction("Index", "Employee");
