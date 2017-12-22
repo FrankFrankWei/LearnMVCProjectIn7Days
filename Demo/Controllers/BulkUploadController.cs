@@ -7,10 +7,11 @@ using System.Web.Mvc;
 using Demo.ViewModels;
 using Demo.Models;
 using System.IO;
+using System.Threading.Tasks;
 
 namespace Demo.Controllers
 {
-    public class BulkUploadController : Controller
+    public class BulkUploadController : AsyncController
     {
         //
         // GET: /BulkUpload/
@@ -20,7 +21,8 @@ namespace Demo.Controllers
             return View(new FileUploadViewModel());
         }
 
-        public ActionResult Upload(FileUploadViewModel file)
+        [AdminFilter]
+        public async Task<ActionResult> Upload(FileUploadViewModel file)
         {
             List<Employee> employees = GetEmployeesFromUploadFile(file);
             (new EmployeeBusinessLayer()).UploadEmployees(employees);
