@@ -1,4 +1,5 @@
-﻿using System.Web;
+﻿using Demo.Filters;
+using System.Web;
 using System.Web.Mvc;
 
 namespace Demo
@@ -9,6 +10,7 @@ namespace Demo
         {
             filters.Add(new HandleErrorAttribute());
             //filters.Add(new AuthorizeAttribute());// global authentication
+            filters.Add(new HeaderFooterFilter());
         }
     }
 }

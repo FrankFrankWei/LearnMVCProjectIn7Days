@@ -45,6 +45,13 @@ namespace Demo.Models
             }
         }
 
+        public void UploadEmployees(List<Employee> employees)
+        {
+            SalesERPDAL dal = new SalesERPDAL();
+            dal.Employees.AddRange(employees);
+            dal.SaveChanges();
+        }
+
         #region private methods
         private List<Employee> MockData()
         {
