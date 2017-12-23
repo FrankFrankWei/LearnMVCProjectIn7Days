@@ -1,0 +1,58 @@
+﻿@model ViewModel.SPA.MainViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Employee Single Page Application</title>
+
+    <script src="~/Scripts/jquery-1.12.4.min.js"></script>
+    <script src="~/Scripts/jquery-ui-1.12.1.min.js"></script>
+    <link href="~/Content/themes/base/all.css" rel="stylesheet" />
+
+    <script type="text/javascript">
+        function OpenAddNew() {
+            $.get("/SPA/Main/AddNew").then
+                (
+                    function (r) {
+                        $("<div id='divCreateEmployee'></div>").html(r).dialog({
+                            width: 'auto', height: 'auto', modal: true, title: "Create New Employee",
+                            close: function () {
+                                $('#divCreateEmployee').remove();
+                            }
+                        });
+                    }
+                );
+        }
+
+        function OpenBulkUpload() {
+            $.get("/SPA/SpaBulkUpload/Index").then
+            (
+                function (r) {
+                    $("<div id='divBulkUpload'></div>").html(r).dialog({
+                        width: 'auto', height: 'auto', modal: true, title: "Bulk Upload Employees",
+                        close: function () {
+                            $('#divBulkUpload').remove();
+                        }
+                    });
+                }
+            );
+        }
+    </script>
+</head>
+<body>
+    <div style="text-align:left">
+        Hello, @Model.UserName
+        <a href="/Authentication/Logout">Logout</a>
+    </div>
+    <hr />
+    <div id="divOption">
+        @Html.Action("EmployeeList", "Main")
+    </div>
+    @Html.Partial("Footer", Model.FooterData)
+</body>
+</html>
