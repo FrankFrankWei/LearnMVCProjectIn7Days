@@ -25,6 +25,14 @@ E:\vs2013ult_workspace\me\LearnMVCProjectIn7Days\Demo\obj\Debug\Demo.csprojResol
 E:\vs2013ult_workspace\me\LearnMVCProjectIn7Days\Demo\obj\Debug\Demo.dll
 E:\vs2013ult_workspace\me\LearnMVCProjectIn7Days\Demo\obj\Debug\Demo.pdb
 E:\vs2013ult_workspace\me\LearnMVCProjectIn7Days\Demo\bin\EntityFramework.dll
-E:\vs2013ult_workspace\me\LearnMVCProjectIn7Days\Demo\bin\EntityFramework.SqlServer.dll
 E:\vs2013ult_workspace\me\LearnMVCProjectIn7Days\Demo\bin\EntityFramework.xml
+E:\vs2013ult_workspace\me\LearnMVCProjectIn7Days\Demo\bin\BusinessEntities.dll
+E:\vs2013ult_workspace\me\LearnMVCProjectIn7Days\Demo\bin\BusinessLayer.dll
+E:\vs2013ult_workspace\me\LearnMVCProjectIn7Days\Demo\bin\ViewModel.dll
+E:\vs2013ult_workspace\me\LearnMVCProjectIn7Days\Demo\bin\DataAccessLayer.dll
+E:\vs2013ult_workspace\me\LearnMVCProjectIn7Days\Demo\bin\BusinessEntities.pdb
+E:\vs2013ult_workspace\me\LearnMVCProjectIn7Days\Demo\bin\BusinessLayer.pdb
+E:\vs2013ult_workspace\me\LearnMVCProjectIn7Days\Demo\bin\ViewModel.pdb
+E:\vs2013ult_workspace\me\LearnMVCProjectIn7Days\Demo\bin\DataAccessLayer.pdb
+E:\vs2013ult_workspace\me\LearnMVCProjectIn7Days\Demo\bin\EntityFramework.SqlServer.dll
 E:\vs2013ult_workspace\me\LearnMVCProjectIn7Days\Demo\bin\EntityFramework.SqlServer.xml

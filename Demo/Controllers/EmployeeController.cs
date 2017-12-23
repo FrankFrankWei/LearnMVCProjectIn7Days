@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
-using Demo.Models;
-using Demo.ViewModels;
 using Demo.Filters;
+using BusinessLayer;
+using BusinessEntities;
+using ViewModel;
 
 namespace Demo.Controllers
 {

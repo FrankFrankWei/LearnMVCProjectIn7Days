@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using BusinessEntities;
+using BusinessLayer;
 using System.Web.Mvc;
-using Demo.Models;
 using System.Web.Security;
 
 namespace Demo.Controllers

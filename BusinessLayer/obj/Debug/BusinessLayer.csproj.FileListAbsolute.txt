@@ -1,0 +1,14 @@
+E:\vs2013ult_workspace\me\LearnMVCProjectIn7Days\BusinessLayer\bin\Debug\BusinessLayer.dll.config
+E:\vs2013ult_workspace\me\LearnMVCProjectIn7Days\BusinessLayer\bin\Debug\BusinessLayer.dll
+E:\vs2013ult_workspace\me\LearnMVCProjectIn7Days\BusinessLayer\bin\Debug\BusinessLayer.pdb
+E:\vs2013ult_workspace\me\LearnMVCProjectIn7Days\BusinessLayer\bin\Debug\BusinessEntities.dll
+E:\vs2013ult_workspace\me\LearnMVCProjectIn7Days\BusinessLayer\bin\Debug\DataAccessLayer.dll
+E:\vs2013ult_workspace\me\LearnMVCProjectIn7Days\BusinessLayer\bin\Debug\EntityFramework.dll
+E:\vs2013ult_workspace\me\LearnMVCProjectIn7Days\BusinessLayer\bin\Debug\EntityFramework.SqlServer.dll
+E:\vs2013ult_workspace\me\LearnMVCProjectIn7Days\BusinessLayer\bin\Debug\BusinessEntities.pdb
+E:\vs2013ult_workspace\me\LearnMVCProjectIn7Days\BusinessLayer\bin\Debug\DataAccessLayer.pdb
+E:\vs2013ult_workspace\me\LearnMVCProjectIn7Days\BusinessLayer\bin\Debug\EntityFramework.xml
+E:\vs2013ult_workspace\me\LearnMVCProjectIn7Days\BusinessLayer\bin\Debug\EntityFramework.SqlServer.xml
+E:\vs2013ult_workspace\me\LearnMVCProjectIn7Days\BusinessLayer\obj\Debug\BusinessLayer.csprojResolveAssemblyReference.cache
+E:\vs2013ult_workspace\me\LearnMVCProjectIn7Days\BusinessLayer\obj\Debug\BusinessLayer.dll
+E:\vs2013ult_workspace\me\LearnMVCProjectIn7Days\BusinessLayer\obj\Debug\BusinessLayer.pdb

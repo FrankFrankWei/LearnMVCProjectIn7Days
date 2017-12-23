@@ -1,0 +1,12 @@
+E:\vs2013ult_workspace\me\LearnMVCProjectIn7Days\DataAccessLayer\bin\Debug\DataAccessLayer.dll.config
+E:\vs2013ult_workspace\me\LearnMVCProjectIn7Days\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+E:\vs2013ult_workspace\me\LearnMVCProjectIn7Days\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+E:\vs2013ult_workspace\me\LearnMVCProjectIn7Days\DataAccessLayer\bin\Debug\BusinessEntities.dll
+E:\vs2013ult_workspace\me\LearnMVCProjectIn7Days\DataAccessLayer\bin\Debug\EntityFramework.dll
+E:\vs2013ult_workspace\me\LearnMVCProjectIn7Days\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.dll
+E:\vs2013ult_workspace\me\LearnMVCProjectIn7Days\DataAccessLayer\bin\Debug\BusinessEntities.pdb
+E:\vs2013ult_workspace\me\LearnMVCProjectIn7Days\DataAccessLayer\bin\Debug\EntityFramework.xml
+E:\vs2013ult_workspace\me\LearnMVCProjectIn7Days\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
+E:\vs2013ult_workspace\me\LearnMVCProjectIn7Days\DataAccessLayer\obj\Debug\DataAccessLayer.csprojResolveAssemblyReference.cache
+E:\vs2013ult_workspace\me\LearnMVCProjectIn7Days\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+E:\vs2013ult_workspace\me\LearnMVCProjectIn7Days\DataAccessLayer\obj\Debug\DataAccessLayer.pdb

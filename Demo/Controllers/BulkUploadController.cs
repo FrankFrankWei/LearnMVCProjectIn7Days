@@ -1,14 +1,11 @@
 ﻿using Demo.Filters;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
-using Demo.ViewModels;
-using Demo.Models;
 using System.IO;
-using System.Threading;
 using System.Threading.Tasks;
+using ViewModel;
+using BusinessEntities;
+using BusinessLayer;
 
 namespace Demo.Controllers
 {

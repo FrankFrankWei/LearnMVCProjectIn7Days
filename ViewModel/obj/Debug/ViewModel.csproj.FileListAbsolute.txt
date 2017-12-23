@@ -1,0 +1,5 @@
+E:\vs2013ult_workspace\me\LearnMVCProjectIn7Days\ViewModel\bin\Debug\ViewModel.dll
+E:\vs2013ult_workspace\me\LearnMVCProjectIn7Days\ViewModel\bin\Debug\ViewModel.pdb
+E:\vs2013ult_workspace\me\LearnMVCProjectIn7Days\ViewModel\obj\Debug\ViewModel.csprojResolveAssemblyReference.cache
+E:\vs2013ult_workspace\me\LearnMVCProjectIn7Days\ViewModel\obj\Debug\ViewModel.dll
+E:\vs2013ult_workspace\me\LearnMVCProjectIn7Days\ViewModel\obj\Debug\ViewModel.pdb
